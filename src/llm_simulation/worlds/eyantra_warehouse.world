@@ -202,12 +202,12 @@
 
     <!-- left side plants -->
 
-    <include>
+    <!-- <include>
       <uri>model://trough</uri>
       <name>trough1</name>
       <pose>-2.3952 -4.0852 0 0 0 -1.57</pose>
       <static>true</static>
-    </include>
+    </include> -->
 
     <include>
       <uri>model://trough</uri>
@@ -223,12 +223,12 @@
       <static>true</static>
     </include>
 
-    <include>
+    <!-- <include>
       <uri>model://trough</uri>
       <name>trough4</name>
       <pose>-2.3954 -0.041 0 0 0 -1.57</pose>
       <static>true</static>
-    </include>
+    </include> -->
 
     <!-- -->
 
@@ -248,37 +248,37 @@
       <static>true</static>
     </include>
 
-    <include>
+    <!-- <include>
       <uri>model://trough</uri>
       <name>trough7</name>
       <pose>-0.521622 -1.3886 0 0 0 -1.57</pose>
       <static>true</static>
-    </include>
+    </include> -->
 
-    <include>
+    <!-- <include>
       <uri>model://trough</uri>
       <name>trough8</name>
       <pose>-0.5216 -0.041 0 0 0 -1.57</pose>
       <static>true</static>
-    </include>
+    </include> -->
 
     <!-- -->
 
     <!-- Extra Plants inside Warehouse-->
 
-    <include>
+    <!-- <include>
       <uri>model://plant_red_yellow_bell_peppers_trough</uri>
       <name>plant_red_yellow_bell_peppers_trough_0_1</name>
       <pose>0.5305 -6.969 0.0 0.0 0.0 3.14</pose>
       <static>true</static>
-    </include>
+    </include> -->
 
-    <include>
+    <!-- <include>
       <uri>model://plant_red_yellow_bell_peppers_trough</uri>
       <name>plant_red_yellow_bell_peppers_trough_0_2</name>
       <pose> 0.3097 -4.5628 0.0 0.0 0.0 3.14</pose>
       <static>true</static>
-    </include>
+    </include> -->
 
 
     <include>
@@ -441,6 +441,50 @@
       <uri>model://person_walking</uri>
       <static>true</static>
     </include> -->
+
+    <model name="plane">
+      <static>true</static>
+      <pose>-1.13 -7.455 0.39 1.57 0 0</pose>
+      <link name="link">
+        <collision name="col">
+          <geometry>
+            <box>
+              <size>8 8 0.1</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name="vis">
+          <geometry>
+            <box>
+              <size>8 0.8 0.1</size>
+            </box>
+          </geometry>
+          <transparency>1.0</transparency>
+        </visual>
+      </link>
+    </model>
+
+    <model name="plane2">
+      <static>true</static>
+      <pose>-1.11 3.0285 0.39 1.57 0 0</pose>
+      <link name="link">
+        <collision name="col">
+          <geometry>
+            <box>
+              <size>8 0.8 0.1</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name="vis">
+          <geometry>
+            <box>
+              <size>8 0.8 0.1</size>
+            </box>
+          </geometry>
+          <transparency>1.0</transparency>
+        </visual>
+      </link>
+    </model>
 
   </world>
 </sdf>

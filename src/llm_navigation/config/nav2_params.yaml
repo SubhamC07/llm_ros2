@@ -289,12 +289,12 @@ controller_server:
 
       BaseObstacle.scale: 0.2 #0.2 # 20.0 # 16.0
       PathAlign.scale: 56.0 # 32 #10
-      GoalAlign.scale: 20.0 #2.0 # 56.0 # 20.0
+      GoalAlign.scale: 10.0 #2.0 # 56.0 # 20.0
       PathDist.scale:  56.0 # 32 #10
-      GoalDist.scale:  20.0 #2.0 # 56.0 # 20.0
+      GoalDist.scale:  10.0 #2.0 # 56.0 # 20.0
 
-      PathAlign.forward_point_distance: 0.1
-      GoalAlign.forward_point_distance: 0.1 #0.075
+      PathAlign.forward_point_distance: 0.2
+      GoalAlign.forward_point_distance: 0.2 #0.075
 
       RotateToGoal.scale: 5.0 #28.0 #10.0
       RotateToGoal.slowing_factor: 5.0
