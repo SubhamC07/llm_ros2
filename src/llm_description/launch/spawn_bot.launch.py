@@ -30,7 +30,7 @@ def generate_launch_description():
     ign_plg += f":{pkg_rover_prefix}/lib"
 
     # 3) Process the rover_description.xacro with proper namespacing
-    xacro_file = os.path.join(pkg_rover_share, 'urdf', 'igvc.urdf.xacro')
+    xacro_file = os.path.join(pkg_rover_share, 'urdf', 'turtlebot3_burger.urdf.xacro')
 
     robot_desc = xacro.process_file(xacro_file, mappings={'prefix': 'igvc_'}).toxml()
 
@@ -82,7 +82,7 @@ def generate_launch_description():
 
                     '-x', '-1.5', 
                     '-y', '-5.5', 
-                    '-z', '0.1550', 
+                    '-z', '0.4550', 
                     '-Y', '1.57',
                 ],
             )

@@ -34,7 +34,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="file://$(find igvc_description)/meshes/base_link.STL" />
+          filename="file://$(find llm_description)/meshes/base_link.STL" />
       </geometry>
       <material
         name="">
@@ -48,7 +48,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="file://$(find igvc_description)/meshes/base_link.STL" />
+          filename="file://$(find llm_description)/meshes/base_link.STL" />
       </geometry>
     </collision>
   </link>
@@ -74,7 +74,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="file://$(find igvc_description)/meshes/left_wheel_link.STL" />
+          filename="file://$(find llm_description)/meshes/left_wheel_link.STL" />
       </geometry>
       <material
         name="">
@@ -88,7 +88,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="file://$(find igvc_description)/meshes/left_wheel_link.STL" />
+          filename="file://$(find llm_description)/meshes/left_wheel_link.STL" />
       </geometry>
     </collision>
   </link>
@@ -127,7 +127,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="file://$(find igvc_description)/meshes/right_wheel_link.STL" />
+          filename="file://$(find llm_description)/meshes/right_wheel_link.STL" />
       </geometry>
       <material
         name="">
@@ -141,7 +141,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="file://$(find igvc_description)/meshes/right_wheel_link.STL" />
+          filename="file://$(find llm_description)/meshes/right_wheel_link.STL" />
       </geometry>
     </collision>
   </link>
@@ -180,7 +180,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="file://$(find igvc_description)/meshes/caster_1_link.STL" />
+          filename="file://$(find llm_description)/meshes/caster_1_link.STL" />
       </geometry>
       <material
         name="">
@@ -194,7 +194,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="file://$(find igvc_description)/meshes/caster_1_link.STL" />
+          filename="file://$(find llm_description)/meshes/caster_1_link.STL" />
       </geometry>
     </collision>
   </link>
@@ -233,7 +233,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="file://$(find igvc_description)/meshes/caster_2_link.STL" />
+          filename="file://$(find llm_description)/meshes/caster_2_link.STL" />
       </geometry>
       <material
         name="">
@@ -247,7 +247,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="file://$(find igvc_description)/meshes/caster_2_link.STL" />
+          filename="file://$(find llm_description)/meshes/caster_2_link.STL" />
       </geometry>
     </collision>
   </link>
@@ -286,7 +286,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="file://$(find igvc_description)/meshes/lidar_link.STL" />
+          filename="file://$(find llm_description)/meshes/lidar_link.STL" />
       </geometry>
       <material
         name="">
@@ -300,7 +300,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="file://$(find igvc_description)/meshes/lidar_link.STL" />
+          filename="file://$(find llm_description)/meshes/lidar_link.STL" />
       </geometry>
     </collision>
   </link>
@@ -339,7 +339,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="file://$(find igvc_description)/meshes/camera_link.STL" />
+          filename="file://$(find llm_description)/meshes/camera_link.STL" />
       </geometry>
       <material
         name="">
@@ -353,7 +353,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="file://$(find igvc_description)/meshes/camera_link.STL" />
+          filename="file://$(find llm_description)/meshes/camera_link.STL" />
       </geometry>
     </collision>
   </link>
@@ -565,7 +565,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="file://$(find igvc_description)/meshes/gps_link.STL" />
+          filename="file://$(find llm_description)/meshes/gps_link.STL" />
       </geometry>
       <material
         name="">
@@ -579,7 +579,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="file://$(find igvc_description)/meshes/gps_link.STL" />
+          filename="file://$(find llm_description)/meshes/gps_link.STL" />
       </geometry>
     </collision>
   </link>
@@ -618,7 +618,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="file://$(find igvc_description)/meshes/phone_link.STL" />
+          filename="file://$(find llm_description)/meshes/phone_link.STL" />
       </geometry>
       <material
         name="">
@@ -632,7 +632,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="file://$(find igvc_description)/meshes/phone_link.STL" />
+          filename="file://$(find llm_description)/meshes/phone_link.STL" />
       </geometry>
     </collision>
   </link>
