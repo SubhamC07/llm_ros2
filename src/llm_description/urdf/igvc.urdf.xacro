@@ -1,0 +1,655 @@
+<?xml version="1.0" ?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot name="anvrit" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+  <link name="base_footprint"/>
+
+  <joint name="base_link_joint" type="fixed">
+    <origin xyz="0 0 0.165" rpy="0 0 0"/>  <!-- rpy 0 0 3.14159 -->
+    <parent link="base_footprint"/>
+    <child link="base_link"/>
+  </joint>
+
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="-0.28971 -7.0545E-05 0.083054"
+        rpy="0 0 3.14159" />
+      <mass
+        value="27.201" />
+      <inertia
+        ixx="1.05252604"
+        ixy="0.00000000"
+        ixz="0.00000000"
+        iyy="1.76148151"
+        iyz="0.00000000"
+        izz="2.45440540" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find igvc_description)/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.75294 0.75294 0.75294 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find igvc_description)/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="left_wheel_link">
+    <inertial>
+      <origin
+        xyz="-0.00063177 -0.00055163 -0.0003195"
+        rpy="0 0 0" />
+      <mass
+        value="2.2144" />
+      <inertia
+        ixx="0.012083"
+        ixy="0.00012495"
+        ixz="2.3628E-07"
+        iyy="0.012043"
+        iyz="-1.593E-07"
+        izz="0.021393" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find igvc_description)/meshes/left_wheel_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find igvc_description)/meshes/left_wheel_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_wheel_joint"
+    type="continuous">
+    <origin
+      xyz="0 0.433386194229126 0"
+      rpy="-1.570796326794 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="left_wheel_link" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="right_wheel_link">
+    <inertial>
+      <origin
+        xyz="-0.00054883 0.00063732 -0.00061517"
+        rpy="0 0 0" />
+      <mass
+        value="2.2144" />
+      <inertia
+        ixx="0.012048"
+        ixy="-0.00012561"
+        ixz="6.3859E-07"
+        iyy="0.012078"
+        iyz="-1.9449E-07"
+        izz="0.021393" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find igvc_description)/meshes/right_wheel_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find igvc_description)/meshes/right_wheel_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right_wheel_joint"
+    type="continuous">
+    <origin
+      xyz="0 -0.433386194229126 0"
+      rpy="1.5707963267949 -1.5707963267949 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="right_wheel_link" />
+    <axis
+      xyz="0 0 -1" />
+  </joint>
+  <link
+    name="caster_1_link">
+    <inertial>
+      <origin
+        xyz="-0.0023809 0.0053971 -0.032282"
+        rpy="0 0 0" />
+      <mass
+        value="0.037728" />
+      <inertia
+        ixx="1.207E-05"
+        ixy="-3.4088E-07"
+        ixz="-6.4848E-07"
+        iyy="1.2694E-05"
+        iyz="1.4692E-06"
+        izz="1.0775E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find igvc_description)/meshes/caster_1_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find igvc_description)/meshes/caster_1_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="caster_1_joint"
+    type="continuous">
+    <origin
+      xyz="-0.784999999999994 0 -0.0518595597484284"
+      rpy="0 0 1.15" />
+    <parent
+      link="base_link" />
+    <child
+      link="caster_1_link" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="caster_2_link">
+    <inertial>
+      <origin
+        xyz="-6.66133814775094E-16 -4.57966997657877E-16 1.66533453693773E-16"
+        rpy="0 0 0" />
+      <mass
+        value="0.0832088133986632" />
+      <inertia
+        ixx="4.46664474667494E-05"
+        ixy="7.25724527823638E-06"
+        ixz="3.85349322672759E-22"
+        iyy="3.14173287536557E-05"
+        iyz="-2.26991942281935E-21"
+        izz="2.82157802491572E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find igvc_description)/meshes/caster_2_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.250980392156863 0.250980392156863 0.250980392156863 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find igvc_description)/meshes/caster_2_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="caster_2_joint"
+    type="continuous">
+    <origin
+      xyz="-0.0107632397404874 0.0243980282277062 -0.0760000000000001"
+      rpy="0 0 0" />
+    <parent
+      link="caster_1_link" />
+    <child
+      link="caster_2_link" />
+    <axis
+      xyz="-0.914926058539058 -0.403621490268029 0" />
+  </joint>
+  <link
+    name="laser">
+    <inertial>
+      <origin
+        xyz="-0.00676653011667602 9.19261110874647E-05 -0.00738187226715947"
+        rpy="0 0 3.14159" />
+      <mass
+        value="1.33076913637071" />
+      <inertia
+        ixx="0.000614917940454084"
+        ixy="-8.01984318978737E-07"
+        ixz="-0.000158243025911161"
+        iyy="0.000960697335617222"
+        iyz="3.09162986587416E-06"
+        izz="0.00109815200027137" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find igvc_description)/meshes/lidar_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find igvc_description)/meshes/lidar_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="lidar_joint"
+    type="fixed">
+    <origin
+      xyz="-0.327999999999984 0.00250000000000023 0.193953773584904"
+      rpy="0 0 0" /> <!-- 0 0 3.14159-->
+    <parent
+      link="base_link" />
+    <child
+      link="laser" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="camera_link">
+    <inertial>
+      <origin
+        xyz="0.0214850389798296 -0.000533518397753258 -0.00719165397072863" /> <!--0.0214850389798296-->
+        rpy="0 0 0" />
+      <mass
+        value="0.237785110963087" />
+      <inertia
+        ixx="0.00041109010827315"
+        ixy="2.00243497326135E-05"
+        ixz="1.48233721450063E-07"
+        iyy="4.97776083745444E-05"
+        iyz="1.08586163834263E-08"
+        izz="0.000432963162718765" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find igvc_description)/meshes/camera_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find igvc_description)/meshes/camera_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="camera_joint"
+    type="fixed">
+    <origin
+      xyz="-0.339698682717118  -0.000402292580199012  0.957303733041514"
+      rpy="0 0 0" /> <!-- Rotate 180 degrees around Z to face forward -->
+    <parent
+      link="base_link" />
+    <child
+      link="camera_link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+
+  <link name="camera_optical_frame">
+    <inertial>
+      <mass value="0.001" />
+      <inertia ixx="0.00001" ixy="0" ixz="0" iyy="0.00001" iyz="0" izz="0.00001" />
+    </inertial>
+  </link>
+
+  <joint name="camera_optical_joint" type="fixed">
+    <parent link="camera_link"/>
+    <child link="camera_optical_frame"/>
+    <!-- change here as you adjust camera -->
+    <axis xyz="0 0 1"/>
+    <origin xyz="0 0 0" rpy="0 0 0"/> <!-- "0 0.58 0" -->
+  </joint>
+
+
+  <!-- Ignition Gazebo plugin configuration -->
+  <gazebo>
+    <plugin filename="gz-sim-joint-state-publisher-system"
+            name="gz::sim::systems::JointStatePublisher">
+      <topic>joint_states</topic>
+      <joint_name>left_wheel_joint</joint_name>
+      <joint_name>right_wheel_joint</joint_name>
+      <joint_name>caster_1_joint</joint_name>
+      <joint_name>caster_2_joint</joint_name>
+    </plugin>
+  </gazebo>
+
+  <!-- <gazebo>
+    <plugin filename="gz-sim-diff-drive-system"
+            name="gz::sim::systems::DiffDrive">
+      <left_joint>left_wheel_joint</left_joint>
+      <right_joint>right_wheel_joint</right_joint>
+      <wheel_separation>0.866772388458252</wheel_separation>
+      <wheel_radius>0.215</wheel_radius>
+      <max_acceleration>10.0</max_acceleration>
+      <max_linear_velocity>1.5</max_linear_velocity>
+      <min_linear_velocity>-1.5</min_linear_velocity>
+      <max_angular_velocity>2.0</max_angular_velocity>
+      <min_angular_velocity>-2.0</min_angular_velocity>
+      <topic>cmd_vel</topic>
+      <odom_topic>odom</odom_topic>
+      <tf_topic>tf</tf_topic>
+      <frame_id>odom</frame_id>
+      <child_frame_id>base_footprint</child_frame_id>
+    </plugin>
+  </gazebo> -->
+
+  <gazebo>
+    <plugin
+      filename="ignition-gazebo-odometry-publisher-system"
+      name="ignition::gazebo::systems::OdometryPublisher">
+      <odom_topic>odom</odom_topic>
+      <odom_frame>odom</odom_frame>
+      <tf_topic>tf</tf_topic>
+      <robot_base_frame>base_footprint</robot_base_frame>
+    </plugin>
+  </gazebo>
+
+  <!-- This is the drive plugin -->
+  <gazebo>
+    <plugin filename="ignition-gazebo-diff-drive-system" name="ignition::gazebo::systems::DiffDrive">
+      <left_joint>left_wheel_joint</left_joint>
+      <right_joint>right_wheel_joint</right_joint>
+
+      <wheel_separation>0.866772388458252</wheel_separation>
+      <wheel_radius>0.215</wheel_radius>
+
+      <max_acceleration>10.0</max_acceleration>
+      <max_linear_velocity>5.0</max_linear_velocity>
+      <min_linear_velocity>-5.0</min_linear_velocity>
+      <max_angular_velocity>2.0</max_angular_velocity>
+      <min_angular_velocity>-2.0</min_angular_velocity>
+      <topic>cmd_vel</topic>
+      <frame_id>odom</frame_id>
+      <child_frame_id>base_footprint</child_frame_id>
+
+    </plugin>
+  </gazebo>
+
+  
+  <!-- <gazebo reference="camera_optical_frame">
+      <sensor name="realsense2_camera" type="rgbd_camera">
+        <ignition_frame_id>camera_optical_frame</ignition_frame_id>
+        <camera name="realsense2_camera">
+          <horizontal_fov>1.2043</horizontal_fov>
+          <lens>
+            <intrinsics>
+              <fx>915.3003540039062</fx>
+              <fy>914.0320434570312</fy>
+              <cx>642.724365234375</cx>
+              <cy>361.9780578613281</cy>
+              <s>0</s>
+            </intrinsics>
+          </lens>
+          <distortion>
+            <k1>0.0</k1>
+            <k2>0.0</k2>
+            <k3>0.0</k3>
+            <p1>0.0</p1>
+            <p2>0.0</p2>
+            <center>0.5 0.5</center>
+          </distortion>
+          <image>
+            <width>1280</width>
+            <height>720</height>
+            <format>R8G8B8</format>
+          </image>
+          <clip>
+            <near>0.1</near>
+            <far>100</far>
+          </clip>
+          <depth_camera>
+            <clip>
+              <near>0.1</near>
+              <far>100</far>
+            </clip>
+          </depth_camera>
+          <noise>
+            <type>gaussian</type>
+            <mean>0.0</mean>
+            <stddev>0.007</stddev>
+          </noise>
+        </camera>
+        <always_on>1</always_on>
+        <update_rate>4</update_rate>
+        <visualize>0</visualize>
+        <topic>camera</topic>
+      </sensor>
+
+  </gazebo> -->
+
+
+  <gazebo reference="laser">
+    <sensor name="laser" type="gpu_lidar">
+      <always_on>true</always_on>
+      <visualize>false</visualize>
+      <topic>scan</topic>
+      <pose>0 0 0 0 0 0</pose>
+      <update_rate>10</update_rate>
+      <gz_frame_id>laser</gz_frame_id>
+      <lidar>
+        <scan>
+          <horizontal>
+            <samples>360</samples>
+            <resolution>1.0</resolution>
+            <min_angle>-3.14</min_angle>
+            <max_angle>3.14</max_angle>
+          </horizontal>
+          <vertical>
+            <samples>1</samples>
+            <resolution>0.01</resolution>
+            <min_angle>0</min_angle>
+            <max_angle>0</max_angle>
+          </vertical>
+        </scan>
+        <range>
+          <min>0.8</min>
+          <max>8.0</max>
+          <resolution>0.02</resolution>
+        </range>
+        <noise>
+          <type>gaussian</type>
+          <mean>0.0</mean>
+          <stddev>0.01</stddev>
+        </noise>
+      </lidar>
+    </sensor>
+  </gazebo>
+
+
+
+  <link
+    name="gps_link">
+    <inertial>
+      <origin
+        xyz="-0.000301557177801323 -0.000393461407438733 0.00829464708836225"
+        rpy="0 0 0" />
+      <mass
+        value="0.0273352279896813" />
+      <inertia
+        ixx="3.56094833912897E-06"
+        ixy="-2.86831426481786E-08"
+        ixz="1.01906621875833E-08"
+        iyy="3.67783329229382E-06"
+        iyz="5.91093283861894E-10"
+        izz="7.06140830546018E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find igvc_description)/meshes/gps_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find igvc_description)/meshes/gps_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="gps_joint"
+    type="fixed">
+    <origin
+      xyz="-0.38999951204467 0.205296819523394 0.480853773584912"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="gps_link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="phone_link">
+    <inertial>
+      <origin
+        xyz="0.00021409 -1.4913E-05 -0.0035412"
+        rpy="0 0 0" />
+      <mass
+        value="0.063136" />
+      <inertia
+        ixx="2.2655E-05"
+        ixy="6.8255E-08"
+        ixz="6.7005E-09"
+        iyy="9.6929E-05"
+        iyz="-4.766E-09"
+        izz="0.00011907" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find igvc_description)/meshes/phone_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find igvc_description)/meshes/phone_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="phone_joint"
+    type="fixed">
+    <origin
+      xyz="-0.586143430372339 0.00107363827117987 0.135403773584905"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="phone_link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+
+
+
+</robot>

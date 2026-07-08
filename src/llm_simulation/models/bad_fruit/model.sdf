@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+
+<sdf version="1.6">
+  <model name='bad_fruit'>
+    <link name="body">
+      <pose>0 0 0 0 0 0</pose>
+
+        <visual name="visual">
+          <geometry>
+            <mesh><uri>model://bad_fruit/meshes/bad_fruit.obj</uri></mesh>
+          </geometry>
+        </visual>
+
+        <collision name="collision">
+          <geometry>
+            <mesh><uri>model://bad_fruit/meshes/bad_fruit_collision.obj</uri></mesh>
+          </geometry>
+        </collision>
+
+    </link>
+  </model>
+</sdf>

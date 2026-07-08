@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<COLLADA xmlns="http://www.collada.org/2005/11/COLLADASchema" version="1.4.1">
+  <asset>
+    <contributor>
+      <author>Simple Box Creator</author>
+    </contributor>
+    <created>2025-09-26T13:59:38</created>
+    <modified>2025-09-26T13:59:38</modified>
+    <unit name="meter" meter="1"/>
+    <up_axis>Z_UP</up_axis>
+  </asset>
+  <library_effects>
+    <effect id="aruco_tag_3_effect">
+      <profile_COMMON>
+        <newparam sid="aruco_tag_3.jpg-surface">
+          <surface type="2D">
+            <init_from>aruco_tag_3.jpg</init_from>
+          </surface>
+        </newparam>
+        <newparam sid="aruco_tag_3.jpg-sampler">
+          <sampler2D>
+            <source>aruco_tag_3.jpg-surface</source>
+          </sampler2D>
+        </newparam>
+        <technique sid="common">
+          <lambert>
+            <diffuse>
+              <texture texture="aruco_tag_3.jpg-sampler" texcoord="UVMap"/>
+            </diffuse>
+          </lambert>
+        </technique>
+      </profile_COMMON>
+    </effect>
+  </library_effects>
+  <library_images>
+    <image id="aruco_tag_3.jpg" name="aruco_tag_3.jpg">
+      <init_from>aruco_tag_3.jpg</init_from>
+    </image>
+  </library_images>
+  <library_materials>
+    <material id="aruco_tag_3_material" name="aruco_tag_3">
+      <instance_effect url="#aruco_tag_3_effect"/>
+    </material>
+  </library_materials>
+  <library_geometries>
+    <geometry id="Box-mesh" name="Box">
+      <mesh>
+        <source id="Box-positions">
+          <float_array id="Box-positions-array" count="24">
+            -0.025 -0.025 -0.025
+            0.025 -0.025 -0.025
+            -0.025 0.025 -0.025
+            0.025 0.025 -0.025
+            -0.025 -0.025 0.025
+            0.025 -0.025 0.025
+            -0.025 0.025 0.025
+            0.025 0.025 0.025
+            -0.025 -0.025 -0.025
+            0.025 -0.025 -0.025
+            -0.025 -0.025 0.025
+            0.025 -0.025 0.025
+          </float_array>
+          <technique_common>
+            <accessor source="#Box-positions-array" count="12" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Box-normals">
+          <float_array id="Box-normals-array" count="18">
+            0 0 -1
+            0 0 1
+            -1 0 0
+            1 0 0
+            0 -1 0
+            0 1 0
+          </float_array>
+          <technique_common>
+            <accessor source="#Box-normals-array" count="6" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Box-map">
+          <float_array id="Box-map-array" count="48">
+            0 1 1 1 0 0 1 0
+            0 1 1 1 0 0 1 0
+            0 1 1 1 0 0 1 0
+            0 1 1 1 0 0 1 0
+            0 1 1 1 0 0 1 0
+            0 1 1 1 0 0 1 0
+          </float_array>
+          <technique_common>
+            <accessor source="#Box-map-array" count="24" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="Box-vertices">
+          <input semantic="POSITION" source="#Box-positions"/>
+        </vertices>
+        <triangles material="aruco_tag_3_material" count="12">
+          <input semantic="VERTEX" source="#Box-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#Box-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#Box-map" offset="2" set="0"/>
+          <p>
+            0 0 0 1 0 1 2 0 2 1 0 3 3 0 4 2 0 5
+            4 1 6 6 1 7 5 1 8 6 1 9 7 1 10 5 1 11
+            8 2 12 4 2 13 10 2 14 4 2 15 6 2 16 10 2 17
+            9 3 18 11 3 19 5 3 20 11 3 21 7 3 22 5 3 23
+          </p>
+        </triangles>
+      </mesh>
+    </geometry>
+  </library_geometries>
+  <library_visual_scenes>
+    <visual_scene id="Scene" name="Scene">
+      <node id="Box" name="Box" type="NODE">
+        <instance_geometry url="#Box-mesh"/>
+      </node>
+    </visual_scene>
+  </library_visual_scenes>
+  <scene>
+    <instance_visual_scene url="#Scene"/>
+  </scene>
+</COLLADA>

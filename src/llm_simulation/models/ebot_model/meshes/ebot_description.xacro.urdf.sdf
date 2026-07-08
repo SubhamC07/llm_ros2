@@ -1,0 +1,458 @@
+<sdf version='1.9'>
+  <model name='ebot'>
+    <link name='ebot_base_link'>
+      <inertial>
+        <pose>0 0 0.12 0 0 0</pose>
+        <mass>46.033999999999999</mass>
+        <inertia>
+          <ixx>0.58501541666666657</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>1.5525925541666661</iyy>
+          <iyz>0</iyz>
+          <izz>1.6580871374999999</izz>
+        </inertia>
+      </inertial>
+      <collision name='ebot_base_link_fixed_joint_lump__ebot_base_collision'>
+        <pose>0 0 0.12 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.585 0.3 0.25</size>
+          </box>
+        </geometry>
+      </collision>
+      <collision name='ebot_base_link_fixed_joint_lump__ebot_base_collision_1'>
+        <pose>0 0 0.457521 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.35 0.29 0.435</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name='ebot_base_link_fixed_joint_lump__ebot_base_visual'>
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>file:///home/joel/kc25_ws/dev-sim_ws/install/ebot_description/share/ebot_description/meshes/chassis_modified.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='ebot_base_link_fixed_joint_lump__FUS1_visual_1'>
+        <pose>0.297825909825268 -0.157279305693451 0.0977263808983278 -1.5707963267949 0 0.006797068273444629</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>file:///home/joel/kc25_ws/dev-sim_ws/install/ebot_description/share/ebot_description/meshes/FUS1.STL</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <diffuse>0.313726 0.313726 0.313726 1</diffuse>
+          <ambient>0.313726 0.313726 0.313726 1</ambient>
+        </material>
+      </visual>
+      <visual name='ebot_base_link_fixed_joint_lump__FUS2_visual_2'>
+        <pose>0.295786805044471 0.142713764312663 0.09772638089832859 -1.5707963267949 0 0.006797068273444629</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>file:///home/joel/kc25_ws/dev-sim_ws/install/ebot_description/share/ebot_description/meshes/FUS2.STL</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <diffuse>0.313725 0.313725 0.313725 1</diffuse>
+          <ambient>0.313725 0.313725 0.313725 1</ambient>
+        </material>
+      </visual>
+      <visual name='ebot_base_link_fixed_joint_lump__FUS3_visual_3'>
+        <pose>0.27274874909921 -0.0749478536996718 0.0424745013517897 0 0.7853981633974491 0.00679706827344116</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>file:///home/joel/kc25_ws/dev-sim_ws/install/ebot_description/share/ebot_description/meshes/FUS3.STL</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <diffuse>0.313725 0.313725 0.313725 1</diffuse>
+          <ambient>0.313725 0.313725 0.313725 1</ambient>
+        </material>
+      </visual>
+      <visual name='ebot_base_link_fixed_joint_lump__FUS4_visual_4'>
+        <pose>0.271702008645067 0.0790485889034664 0.0424745013517894 0 0.7853981633974491 0.00679706827344116</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>file:///home/joel/kc25_ws/dev-sim_ws/install/ebot_description/share/ebot_description/meshes/FUS4.STL</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <diffuse>0.313726 0.313726 0.313726 1</diffuse>
+          <ambient>0.313726 0.313726 0.313726 1</ambient>
+        </material>
+      </visual>
+      <visual name='ebot_base_link_fixed_joint_lump__LHUS10_visual_5'>
+        <pose>0.14045985551618 0.10004021562239 0.196076309026377 0.001868830766043012 0.123098458475999 0.7998493484503931</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>file:///home/joel/kc25_ws/dev-sim_ws/install/ebot_description/share/ebot_description/meshes/LHUS10.STL</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <diffuse>0.313725 0.313725 0.313725 1</diffuse>
+          <ambient>0.313725 0.313725 0.313725 1</ambient>
+        </material>
+      </visual>
+      <visual name='ebot_base_link_fixed_joint_lump__LHUS9_visual_6'>
+        <pose>-0.180600634182961 0.14597582665002 0.189449821416576 0 0 1.57759339506834</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>file:///home/joel/kc25_ws/dev-sim_ws/install/ebot_description/share/ebot_description/meshes/LHUS9.STL</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <diffuse>0.313726 0.313726 0.313726 1</diffuse>
+          <ambient>0.313726 0.313726 0.313726 1</ambient>
+        </material>
+      </visual>
+      <visual name='ebot_base_link_fixed_joint_lump__RHUS7_visual_7'>
+        <pose>-0.17860231149778 -0.148017381955971 0.189449821416576 0 0 -1.56399925852145</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>file:///home/joel/kc25_ws/dev-sim_ws/install/ebot_description/share/ebot_description/meshes/RHUS7.STL</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <diffuse>0.313726 0.313726 0.313726 1</diffuse>
+          <ambient>0.313726 0.313726 0.313726 1</ambient>
+        </material>
+      </visual>
+      <visual name='ebot_base_link_fixed_joint_lump__RHUS9_visual_8'>
+        <pose>0.141804076845343 -0.09772160961624141 0.196076309026378 -0.001868830766054911 0.123098458475999 -0.7862552119035011</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>file:///home/joel/kc25_ws/dev-sim_ws/install/ebot_description/share/ebot_description/meshes/RHUS9.STL</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <diffuse>0.313725 0.313725 0.313725 1</diffuse>
+          <ambient>0.313725 0.313725 0.313725 1</ambient>
+        </material>
+      </visual>
+      <visual name='ebot_base_link_fixed_joint_lump__ultrasonic_rl_visual_9'>
+        <pose>-0.29532868617037 0.157696288994793 0.09770294372515149 -1.5707963267949 0 -3.13479558531634</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>file:///home/joel/kc25_ws/dev-sim_ws/install/ebot_description/share/ebot_description/meshes/RUS5.STL</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <diffuse>0.313725 0.313725 0.313725 1</diffuse>
+          <ambient>0.313725 0.313725 0.313725 1</ambient>
+        </material>
+      </visual>
+      <visual name='ebot_base_link_fixed_joint_lump__ultrasonic_rr_visual_10'>
+        <pose>-0.293289581389573 -0.14229678101132 0.0977029437251508 -1.5707963267949 0 -3.13479558531634</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>file:///home/joel/kc25_ws/dev-sim_ws/install/ebot_description/share/ebot_description/meshes/RUS6.STL</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <diffuse>0.313726 0.313726 0.313726 1</diffuse>
+          <ambient>0.313726 0.313726 0.313726 1</ambient>
+        </material>
+      </visual>
+      <visual name='ebot_base_link_fixed_joint_lump__imu_link_visual_11'>
+        <pose>0 0 0.2 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.02 0.015 0.008</size>
+          </box>
+        </geometry>
+      </visual>
+      <visual name='ebot_base_link_fixed_joint_lump__laser_visual_12'>
+        <pose>0.255540836099039 0 0.18 0 0 0.00679706827344463</pose>
+        <geometry>
+          <cylinder>
+            <length>0.040000000000000001</length>
+            <radius>0.029999999999999999</radius>
+          </cylinder>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='FWLJ' type='revolute'>
+      <pose relative_to='ebot_base_link'>0.199948480594093 0.192163491981716 0.0450000000000047 0 0 0.00679706827344463</pose>
+      <parent>ebot_base_link</parent>
+      <child>FWL</child>
+      <axis>
+        <xyz>0 1 0</xyz>
+        <limit>
+          <lower>-10000000000000000</lower>
+          <upper>10000000000000000</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='FWL'>
+      <pose relative_to='FWLJ'>0 0 0 0 0 0</pose>
+      <inertial>
+        <pose>6.659400000000001e-05 0.025016 -1.349e-06 0 0 0</pose>
+        <mass>2.637</mass>
+        <inertia>
+          <ixx>0.0071418750000000024</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0.013185000000000001</iyy>
+          <iyz>0</iyz>
+          <izz>0.0071418750000000024</izz>
+        </inertia>
+      </inertial>
+      <collision name='FWL_collision'>
+        <pose>0 0.025 0 0 1.570796326794897 -1.570796326794897</pose>
+        <geometry>
+          <cylinder>
+            <length>0.050000000000000003</length>
+            <radius>0.10000000000000001</radius>
+          </cylinder>
+        </geometry>
+      </collision>
+      <visual name='FWL_visual'>
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>file:///home/joel/kc25_ws/dev-sim_ws/install/ebot_description/share/ebot_description/meshes/FWL.STL</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <diffuse>0 0 0 1</diffuse>
+          <ambient>0 0 0 1</ambient>
+        </material>
+      </visual>
+    </link>
+    <joint name='FWRJ' type='revolute'>
+      <pose relative_to='ebot_base_link'>0.202539503068943 -0.189027702306049 0.0449999999999943 -3.14159265358979 0.9110963622385631 0.006797068273438887</pose>
+      <parent>ebot_base_link</parent>
+      <child>FWR</child>
+      <axis>
+        <xyz>0 -1 0</xyz>
+        <limit>
+          <lower>-10000000000000000</lower>
+          <upper>10000000000000000</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='FWR'>
+      <pose relative_to='FWRJ'>0 0 0 0 0 0</pose>
+      <inertial>
+        <pose>6.6592e-05 0.025016 -1.3483e-06 0 0 0</pose>
+        <mass>2.637</mass>
+        <inertia>
+          <ixx>0.0071418750000000024</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0.013185000000000001</iyy>
+          <iyz>0</iyz>
+          <izz>0.0071418750000000024</izz>
+        </inertia>
+      </inertial>
+      <collision name='FWR_collision'>
+        <pose>0 0.025 0 0 1.570796326794897 -1.570796326794897</pose>
+        <geometry>
+          <cylinder>
+            <length>0.050000000000000003</length>
+            <radius>0.10000000000000001</radius>
+          </cylinder>
+        </geometry>
+      </collision>
+      <visual name='FWR_visual'>
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>file:///home/joel/kc25_ws/dev-sim_ws/install/ebot_description/share/ebot_description/meshes/FWR.STL</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <diffuse>0 0 0 1</diffuse>
+          <ambient>0 0 0 1</ambient>
+        </material>
+      </visual>
+    </link>
+    <joint name='RWLJ' type='revolute'>
+      <pose relative_to='ebot_base_link'>-0.200042279414009 0.189444685607321 0.0449999999999969 0 0 0.00679706827344463</pose>
+      <parent>ebot_base_link</parent>
+      <child>RWL</child>
+      <axis>
+        <xyz>0 1 0</xyz>
+        <limit>
+          <lower>-10000000000000000</lower>
+          <upper>10000000000000000</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='RWL'>
+      <pose relative_to='RWLJ'>0 0 0 0 0 0</pose>
+      <inertial>
+        <pose>6.659400000000001e-05 0.025016 -1.349e-06 0 0 0</pose>
+        <mass>2.637</mass>
+        <inertia>
+          <ixx>0.0071418750000000024</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0.013185000000000001</iyy>
+          <iyz>0</iyz>
+          <izz>0.0071418750000000024</izz>
+        </inertia>
+      </inertial>
+      <collision name='RWL_collision'>
+        <pose>0 0.025 0 0 1.570796326794897 -1.570796326794897</pose>
+        <geometry>
+          <cylinder>
+            <length>0.050000000000000003</length>
+            <radius>0.10000000000000001</radius>
+          </cylinder>
+        </geometry>
+      </collision>
+      <visual name='RWL_visual'>
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>file:///home/joel/kc25_ws/dev-sim_ws/install/ebot_description/share/ebot_description/meshes/RWL.STL</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <diffuse>0 0 0 1</diffuse>
+          <ambient>0 0 0 1</ambient>
+        </material>
+      </visual>
+    </link>
+    <joint name='RWRJ' type='revolute'>
+      <pose relative_to='ebot_base_link'>-0.197451256939211 -0.191746508680447 0.044999999999993 -3.14159265358979 0.5449120844099211 0.00679706827344312</pose>
+      <parent>ebot_base_link</parent>
+      <child>RWR</child>
+      <axis>
+        <xyz>0 -1 0</xyz>
+        <limit>
+          <lower>-10000000000000000</lower>
+          <upper>10000000000000000</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='RWR'>
+      <pose relative_to='RWRJ'>0 0 0 0 0 0</pose>
+      <inertial>
+        <pose>6.6592e-05 0.025016 -1.3483e-06 0 0 0</pose>
+        <mass>2.637</mass>
+        <inertia>
+          <ixx>0.0071418750000000024</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0.013185000000000001</iyy>
+          <iyz>0</iyz>
+          <izz>0.0071418750000000024</izz>
+        </inertia>
+      </inertial>
+      <collision name='RWR_collision'>
+        <pose>0 0.025 0 0 1.570796326794897 -1.570796326794897</pose>
+        <geometry>
+          <cylinder>
+            <length>0.050000000000000003</length>
+            <radius>0.10000000000000001</radius>
+          </cylinder>
+        </geometry>
+      </collision>
+      <visual name='RWR_visual'>
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>file:///home/joel/kc25_ws/dev-sim_ws/install/ebot_description/share/ebot_description/meshes/RWR.STL</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <diffuse>0 0 0 1</diffuse>
+          <ambient>0 0 0 1</ambient>
+        </material>
+      </visual>
+    </link>
+    <frame name='base_footprint_joint' attached_to='ebot_base_link'>
+      <pose>0 0 0 0 -0 0</pose>
+    </frame>
+    <frame name='base_footprint' attached_to='base_footprint_joint'/>
+    <frame name='FUS1J' attached_to='ebot_base'>
+      <pose>0.297826 -0.157279 0.097726 -1.5708 -0 0.006797</pose>
+    </frame>
+    <frame name='FUS1' attached_to='FUS1J'/>
+    <frame name='FUS2J' attached_to='ebot_base'>
+      <pose>0.295787 0.142714 0.097726 -1.5708 -0 0.006797</pose>
+    </frame>
+    <frame name='FUS2' attached_to='FUS2J'/>
+    <frame name='FUS3J' attached_to='ebot_base'>
+      <pose>0.272749 -0.074948 0.042475 0 0.785398 0.006797</pose>
+    </frame>
+    <frame name='FUS3' attached_to='FUS3J'/>
+    <frame name='FUS4J' attached_to='ebot_base'>
+      <pose>0.271702 0.079049 0.042475 0 0.785398 0.006797</pose>
+    </frame>
+    <frame name='FUS4' attached_to='FUS4J'/>
+    <frame name='LHUS10J' attached_to='ebot_base'>
+      <pose>0.14046 0.10004 0.196076 0.001869 0.123098 0.799849</pose>
+    </frame>
+    <frame name='LHUS10' attached_to='LHUS10J'/>
+    <frame name='LHUS9J' attached_to='ebot_base'>
+      <pose>-0.180601 0.145976 0.18945 0 -0 1.57759</pose>
+    </frame>
+    <frame name='LHUS9' attached_to='LHUS9J'/>
+    <frame name='RHUS7J' attached_to='ebot_base'>
+      <pose>-0.178602 -0.148017 0.18945 0 0 -1.564</pose>
+    </frame>
+    <frame name='RHUS7' attached_to='RHUS7J'/>
+    <frame name='RHUS9J' attached_to='ebot_base'>
+      <pose>0.141804 -0.097722 0.196076 -0.001869 0.123098 -0.786255</pose>
+    </frame>
+    <frame name='RHUS9' attached_to='RHUS9J'/>
+    <frame name='RUS5J' attached_to='ebot_base'>
+      <pose>-0.295329 0.157696 0.097703 -1.5708 -0 -3.1348</pose>
+    </frame>
+    <frame name='ultrasonic_rl' attached_to='RUS5J'/>
+    <frame name='RUS6J' attached_to='ebot_base'>
+      <pose>-0.29329 -0.142297 0.097703 -1.5708 -0 -3.1348</pose>
+    </frame>
+    <frame name='ultrasonic_rr' attached_to='RUS6J'/>
+    <frame name='imujoint' attached_to='ebot_base'>
+      <pose>0 0 0.2 0 -0 0</pose>
+    </frame>
+    <frame name='imu_link' attached_to='imujoint'/>
+    <frame name='rplidar_joint' attached_to='ebot_base'>
+      <pose>0.255541 0 0.18 0 -0 0.006797</pose>
+    </frame>
+    <frame name='laser' attached_to='rplidar_joint'/>
+    <frame name='base_link_ebot_base_joint' attached_to='ebot_base_link'>
+      <pose>0 0 0 0 -0 0</pose>
+    </frame>
+    <frame name='ebot_base' attached_to='base_link_ebot_base_joint'/>
+  </model>
+</sdf>
