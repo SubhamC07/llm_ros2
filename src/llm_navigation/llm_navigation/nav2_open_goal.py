@@ -4,9 +4,15 @@ from rclpy.action import ActionClient
 from geometry_msgs.msg import PoseStamped
 from nav2_msgs.action import NavigateToPose
 
+from rclpy.parameter import Parameter
+
 class ContinuousGoalUpdater(Node):
     def __init__(self):
         super().__init__('nav2_continuous_goal')
+
+        self.set_parameters([
+            Parameter("use_sim_time", Parameter.Type.BOOL, True)
+        ])
 
         # Create an Action Client for the Nav2 navigate_to_pose server
         self.nav_to_pose_client = ActionClient(self, NavigateToPose, 'navigate_to_pose')
