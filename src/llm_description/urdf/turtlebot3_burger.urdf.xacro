@@ -198,6 +198,128 @@
     </inertial>
   </link>
 
+  <link
+    name="camera_link">
+    <inertial>
+      <origin
+        xyz="0 0 0"  
+        rpy="0 0 0" />
+      <mass
+        value="0.0037785110963087" />
+      <inertia
+        ixx="0.00041109010827315"
+        ixy="2.00243497326135E-05"
+        ixz="1.48233721450063E-07"
+        iyy="4.97776083745444E-05"
+        iyz="1.08586163834263E-08"
+        izz="0.000432963162718765" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find llm_description)/meshes/d435.dae" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <!-- <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find llm_description)/meshes/d435.dae" />
+      </geometry>
+    </collision> -->
+  </link>
+
+  <joint
+    name="camera_joint"
+    type="fixed">
+    <origin
+      xyz="0.032 0 0.142"
+      rpy="0 -0.38 0" /> <!-- Rotate 180 degrees around Z to face forward -->
+    <parent
+      link="base_link" />
+    <child
+      link="camera_link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+
+  <link name="camera_optical_frame">
+    <inertial>
+      <mass value="0.001" />
+      <inertia ixx="0.00001" ixy="0" ixz="0" iyy="0.00001" iyz="0" izz="0.00001" />
+    </inertial>
+  </link>
+
+  <joint name="camera_optical_joint" type="fixed">
+    <parent link="camera_link"/>
+    <child link="camera_optical_frame"/>
+    <!-- change here as you adjust camera -->
+    <axis xyz="0 0 1"/>
+    <origin xyz="0 0 0" rpy="0 0 0"/> <!-- "0 0.58 0" -->
+  </joint>
+
+
+  <gazebo reference="camera_optical_frame">
+      <sensor name="realsense2_camera" type="rgbd_camera">
+        <ignition_frame_id>camera_optical_frame</ignition_frame_id>
+        <camera name="realsense2_camera">
+          <horizontal_fov>1.2043</horizontal_fov>
+          <lens>
+            <intrinsics>
+              <fx>915.3003540039062</fx>
+              <fy>914.0320434570312</fy>
+              <cx>642.724365234375</cx>
+              <cy>361.9780578613281</cy>
+              <s>0</s>
+            </intrinsics>
+          </lens>
+          <distortion>
+            <k1>0.0</k1>
+            <k2>0.0</k2>
+            <k3>0.0</k3>
+            <p1>0.0</p1>
+            <p2>0.0</p2>
+            <center>0.5 0.5</center>
+          </distortion>
+          <image>
+            <width>1280</width>
+            <height>720</height>
+            <format>R8G8B8</format>
+          </image>
+          <clip>
+            <near>0.1</near>
+            <far>100</far>
+          </clip>
+          <depth_camera>
+            <clip>
+              <near>0.1</near>
+              <far>100</far>
+            </clip>
+          </depth_camera>
+          <noise>
+            <type>gaussian</type>
+            <mean>0.0</mean>
+            <stddev>0.007</stddev>
+          </noise>
+        </camera>
+        <always_on>1</always_on>
+        <update_rate>4</update_rate>
+        <visualize>0</visualize>
+        <topic>camera</topic>
+      </sensor>
+
+  </gazebo>
+
   <gazebo reference="${namespace}base_scan">
     <sensor name="laser" type="gpu_lidar">
       <always_on>true</always_on>
@@ -222,7 +344,7 @@
           </vertical>
         </scan>
         <range>
-          <min>0.8</min>
+          <min>0.2</min>
           <max>8.0</max>
           <resolution>0.02</resolution>
         </range>

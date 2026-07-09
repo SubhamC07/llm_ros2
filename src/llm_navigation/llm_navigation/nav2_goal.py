@@ -6,9 +6,16 @@ from nav2_msgs.action import NavigateToPose
 from geometry_msgs.msg import PoseStamped
 from std_msgs.msg import String
 
+from rclpy.parameter import Parameter
+
 class nav2_goal(Node):
     def __init__(self):
         super().__init__('nav2_goal')
+
+        self.set_parameters([
+            Parameter("use_sim_time", Parameter.Type.BOOL, True)
+        ])
+        
         self.subscription = self.create_subscription(String, '/goal_given', self.goal_callback, 10)
         self.nav_client = ActionClient(self, NavigateToPose, 'navigate_to_pose')
         self.get_logger().info("Subscribed to /goal_given. Waiting for goals...")

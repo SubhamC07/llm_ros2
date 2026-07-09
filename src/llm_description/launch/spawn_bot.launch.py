@@ -80,7 +80,7 @@ def generate_launch_description():
                     # '-Y', '0.0',
 
 
-                    '-x', '-1.5', 
+                    '-x', '-2.5', 
                     '-y', '-5.5', 
                     '-z', '0.4550', 
                     '-Y', '1.57',
@@ -100,60 +100,60 @@ def generate_launch_description():
     #     }]
     # )
 
-    # bridge = TimerAction(
-    #     period=5.0,
-    #     actions=[
-    #         Node(
-    #             package="ros_gz_bridge",
-    #             executable="parameter_bridge",
-    #             name="rover_gz_bridge",
-    #             # namespace="rover",  # Add namespace for bridge
-    #             arguments=[
-    #                 # "/clock@rosgraph_msgs/msg/Clock[ignition.msgs.Clock",
-    #                 "/camera/image@sensor_msgs/msg/Image@ignition.msgs.Image",
-    #                 "/camera/depth_image@sensor_msgs/msg/Image@ignition.msgs.Image",
-    #                 "/camera/camera_info@sensor_msgs/msg/CameraInfo@ignition.msgs.CameraInfo",
-    #                 "/camera/points@sensor_msgs/msg/PointCloud2@ignition.msgs.PointCloudPacked",
+    bridge = TimerAction(
+        period=5.0,
+        actions=[
+            Node(
+                package="ros_gz_bridge",
+                executable="parameter_bridge",
+                name="rover_gz_bridge",
+                # namespace="rover",  # Add namespace for bridge
+                arguments=[
+                    # "/clock@rosgraph_msgs/msg/Clock[ignition.msgs.Clock",
+                    "/camera/image@sensor_msgs/msg/Image@ignition.msgs.Image",
+                    "/camera/depth_image@sensor_msgs/msg/Image@ignition.msgs.Image",
+                    "/camera/camera_info@sensor_msgs/msg/CameraInfo@ignition.msgs.CameraInfo",
+                    "/camera/points@sensor_msgs/msg/PointCloud2@ignition.msgs.PointCloudPacked",
 
 
-    #                 # "/camera2/image@sensor_msgs/msg/Image@ignition.msgs.Image",
-    #                 # "/camera2/depth_image@sensor_msgs/msg/Image@ignition.msgs.Image",
-    #                 # "/camera2/camera_info@sensor_msgs/msg/CameraInfo@ignition.msgs.CameraInfo",
-    #                 # "/camera2/points@sensor_msgs/msg/PointCloud2@ignition.msgs.PointCloudPacked",
-    #             ],
-    #             remappings=[
-    #                 ("/camera/image", "/camera/image_raw"),
-    #                 ("/camera/depth_image", "/camera/depth/image_raw"),
-    #                 ("/camera/camera_info", "/camera/camera_info"),
-    #                 ("/camera/points", "/camera/depth/points"),
+                    # "/camera2/image@sensor_msgs/msg/Image@ignition.msgs.Image",
+                    # "/camera2/depth_image@sensor_msgs/msg/Image@ignition.msgs.Image",
+                    # "/camera2/camera_info@sensor_msgs/msg/CameraInfo@ignition.msgs.CameraInfo",
+                    # "/camera2/points@sensor_msgs/msg/PointCloud2@ignition.msgs.PointCloudPacked",
+                ],
+                remappings=[
+                    ("/camera/image", "/camera/image_raw"),
+                    ("/camera/depth_image", "/camera/depth/image_raw"),
+                    ("/camera/camera_info", "/camera/camera_info"),
+                    ("/camera/points", "/camera/depth/points"),
 
 
-    #                 # ("/camera2/image", "/camera2/image_raw"),
-    #                 # ("/camera2/depth_image", "/camera2/depth/image_raw"),
-    #                 # ("/camera2/camera_info", "/camera2/camera_info"),
-    #                 # ("/camera2/points", "/camera2/depth/points"),
-    #             ],
-    #             output="screen",
-    #             parameters=[{"use_sim_time": True}],
-    #         )
-    #     ]
-    # )
+                    # ("/camera2/image", "/camera2/image_raw"),
+                    # ("/camera2/depth_image", "/camera2/depth/image_raw"),
+                    # ("/camera2/camera_info", "/camera2/camera_info"),
+                    # ("/camera2/points", "/camera2/depth/points"),
+                ],
+                output="screen",
+                parameters=[{"use_sim_time": True}],
+            )
+        ]
+    )
 
 
-    # camera_info_relay = TimerAction(
-    #     period=15.0,
-    #     actions=[
-    #         Node(
-    #             package='topic_tools',
-    #             executable='relay',
-    #             name='camera_info_relay',
-    #             # namespace='rover',  # Add namespace for relay
-    #             arguments=['/camera/camera_info', '/camera/depth/camera_info'],
-    #             output='screen',
-    #             parameters=[{"use_sim_time": True}],
-    #         )
-    #     ]
-    # )
+    camera_info_relay = TimerAction(
+        period=15.0,
+        actions=[
+            Node(
+                package='topic_tools',
+                executable='relay',
+                name='camera_info_relay',
+                # namespace='rover',  # Add namespace for relay
+                arguments=['/camera/camera_info', '/camera/depth/camera_info'],
+                output='screen',
+                parameters=[{"use_sim_time": True}],
+            )
+        ]
+    )
 
     # velodyne_bridge = Node(
     #     package='ros_gz_bridge',
@@ -200,11 +200,11 @@ def generate_launch_description():
     # Assemble launch description
     return LaunchDescription([
         use_sim_time_arg,
-        # bridge,
+        bridge,
         rsp_node,
         # jsp_node,
         spawn_rover,
-        # camera_info_relay,
+        camera_info_relay,
         # velodyne_bridge,
         # point_cloud_to_laserscan,
     ])

@@ -8,7 +8,7 @@ from launch import LaunchDescription
 def generate_launch_description():
 
     xacro_file = os.path.join(
-        get_package_share_directory("llm_description"), 'urdf', "igvc.urdf.xacro"
+        get_package_share_directory("llm_description"), 'urdf', "turtlebot3_burger.urdf.xacro"
     )
 
     doc = xacro.parse(open(xacro_file))

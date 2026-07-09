@@ -468,11 +468,11 @@
     </model>
 
     <actor name="person">
-        <pose>-1.5 -5.0 0.0 0 0 3.14</pose>
+        <pose>-3.5 -0.5 0.0 0 0 1.57</pose>
 
         <skin>
             <filename>model://person_walking/meshes/walking.dae</filename>
-            <scale>1.0</scale>
+            <scale>0.1</scale>
         </skin>
 
         <animation name="walking">
@@ -487,35 +487,45 @@
             <!-- higher tension = more controlled, less overshoot -->
             <trajectory id="0" type="walking" tension="1.0">
             <waypoint>
-                <time>30</time>
-                <pose>-1.5 -5.0 0.0 0 0 3.14</pose>
+                <time>0.0</time>
+                <pose>-3.5 -0.5 0 0 0 0.0</pose>
             </waypoint>
 
             <waypoint>
-                <time>10</time>
-                <pose>-1.5 -1.0 0.0 0 0 3.14</pose>
+                <time>4.0</time>
+                <pose>-2.5 -0.5 0 0 0 0.0</pose>
             </waypoint>
 
             <waypoint>
-                <time>20</time>
-                <pose>1.5 -5.0 0 0 0 0</pose>
+                <time>18.0</time>
+                <pose>1.5 -0.5 0 0 0 0.0</pose>
             </waypoint>
 
             <waypoint>
-                <time>30</time>
-                <pose>1.5 -3.5 0 0 0 1.57</pose>
+                <time>22.0</time>
+                <pose>1.5 -1.0 0 0 0 -1.57</pose>
             </waypoint>
 
             <waypoint>
-                <time>40</time>
-                <pose>0.0 -3.5 0 0 0 3.14</pose>
+                <time>26.0</time>
+                <pose>2.0 -1.5 0 0 0 -0.785</pose>
             </waypoint>
 
             <waypoint>
-                <time>50</time>
-                <pose>-1.5 -5.0 0 0 0 0</pose>
+                <time>32.0</time>
+                <pose>1.0 -1.5 0 0 0 3.14</pose>
             </waypoint>
-            </trajectory>
+
+            <waypoint>
+                <time>40.0</time>
+                <pose>1.0 -3.5 0 0 0 -1.57</pose>
+            </waypoint>
+
+            <waypoint>
+                <time>70.0</time>
+                <pose>-3.5 -0.5 0 0 0 -2.60</pose>
+            </waypoint>
+          </trajectory>
         </script>
     </actor>
 
