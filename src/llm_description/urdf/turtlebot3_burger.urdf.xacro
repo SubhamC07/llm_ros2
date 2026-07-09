@@ -244,7 +244,7 @@
     type="fixed">
     <origin
       xyz="0.032 0 0.142"
-      rpy="0 -0.38 0" /> <!-- Rotate 180 degrees around Z to face forward -->
+      rpy="0 -0.58 0" /> <!-- Rotate 180 degrees around Z to face forward -->
     <parent
       link="base_link" />
     <child
