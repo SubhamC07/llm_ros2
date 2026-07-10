@@ -27,7 +27,7 @@ def generate_launch_description():
             join(gz_sim_share, "launch", "gz_sim.launch.py")
         ),
         launch_arguments={
-            "gz_args": PythonExpression(["'", world_file, " -r'"])
+            "gz_args": PythonExpression(["'", world_file, " -s -r'"])
         }.items(),
     )
 
