@@ -1,0 +1,48 @@
+version: '3.8'
+
+services:
+  omokai_dev:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: omokai_workspace
+    image: omokai:humble-latest
+    
+    # Enable GPU support (optional)
+    # deploy:
+    #   resources:
+    #     reservations:
+    #       devices:
+    #         - driver: nvidia
+    #           count: 1
+    #           capabilities: [gpu]
+    
+    environment:
+      - ROS_DISTRO=humble
+      - ROS_DOMAIN_ID=42
+      - ROS_PARAM_USE_SIM_TIME=true
+      - DISPLAY=${DISPLAY}
+    
+    volumes:
+      # Source code
+      - .:/home/omokai_ws:rw
+      
+      # ROS logs
+      - ros_logs:/home/omokai/.ros/log
+      
+      # X11 socket for GUI (Linux only)
+      - /tmp/.X11-unix:/tmp/.X11-unix:rw
+    
+    network_mode: host
+    
+    # Keep container running
+    stdin_open: true
+    tty: true
+    
+    # Optional: Mount host's ROS installation
+    # This allows using native ROS tools outside container
+    # privileged: true
+
+volumes:
+  ros_logs:
+    driver: local

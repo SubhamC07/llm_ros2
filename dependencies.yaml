@@ -1,0 +1,155 @@
+# omokai_ws - Dependencies Configuration
+# YAML format for dependency management
+
+project:
+  name: omokai_ws
+  version: 0.0.1
+  description: LLM-based autonomous robot navigation and control system
+  ros_distro: humble
+  python_version: "3.8+"
+  os: Ubuntu 22.04 LTS
+
+system_dependencies:
+  build_tools:
+    - build-essential
+    - cmake
+    - git
+  
+  python_development:
+    - python3-pip
+    - python3-dev
+  
+  computer_vision:
+    - libopencv-dev
+    - python3-opencv
+
+ros2_packages:
+  core:
+    - rclpy
+    - rclcpp
+  
+  messages:
+    - sensor-msgs
+    - nav-msgs
+    - geometry-msgs
+    - visualization-msgs
+    - std-msgs
+  
+  navigation:
+    - nav2-msgs
+    - nav2-core
+  
+  transforms:
+    - tf2-ros
+  
+  bridges:
+    - cv-bridge
+    - message-filters
+  
+  launch:
+    - launch
+    - launch-ros
+    - ament-index-python
+  
+  build_testing:
+    - ament-cmake
+    - ament-copyright
+    - ament-flake8
+    - ament-pep257
+
+python_packages:
+  core:
+    numpy: ">=1.21.0"
+    Pillow: ">=8.0.0"
+  
+  computer_vision:
+    opencv-python: ">=4.5.0"
+  
+  llm_framework:
+    langchain-google-genai: ">=0.1.0"
+    langchain-core: ">=0.1.0"
+  
+  object_detection:
+    ultralytics: ">=8.0.0"
+    roboflow: ">=1.0.0"
+  
+  data_validation:
+    pydantic: ">=2.0.0"
+  
+  data_format:
+    PyYAML: ">=5.4.0"
+  
+  testing:
+    pytest: ">=7.0.0"
+  
+  build_tools:
+    setuptools: ">=65.0.0"
+
+packages:
+  llm_description:
+    type: ROS 2 CMake
+    build_depends:
+      - ament_cmake
+    dependencies: []
+  
+  llm_prompt:
+    type: ROS 2 Python
+    build_depends:
+      - ament_cmake
+    dependencies:
+      - langchain-google-genai
+      - pydantic
+      - numpy
+      - rclpy
+      - geometry_msgs
+      - nav_msgs
+  
+  llm_navigation:
+    type: ROS 2 Python
+    build_depends:
+      - ament_cmake
+    dependencies:
+      - ultralytics
+      - roboflow
+      - opencv-python
+      - numpy
+      - rclpy
+      - nav_msgs
+      - sensor_msgs
+      - cv_bridge
+      - message_filters
+  
+  llm_simulation:
+    type: ROS 2 CMake
+    build_depends:
+      - ament_cmake
+    dependencies: []
+
+installation_order:
+  - "System dependencies (apt)"
+  - "ROS 2 base packages"
+  - "Python packages (pip)"
+  - "Workspace packages (colcon build)"
+
+verification:
+  python_imports:
+    - numpy
+    - cv2
+    - ultralytics
+    - pydantic
+    - langchain_google_genai
+    - langchain_core
+    - roboflow
+  
+  ros_commands:
+    - "ros2 --version"
+    - "ros2 pkg list | grep llm"
+  
+  python_version:
+    min: "3.8"
+    recommended: "3.10"
+
+documentation:
+  main: DEPENDENCIES.md
+  install_script: install_dependencies.py
+  requirements_file: requirements.txt
