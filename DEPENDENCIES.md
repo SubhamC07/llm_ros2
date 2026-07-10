@@ -1,7 +1,7 @@
-# omokai_ws - Complete Dependencies Guide
+# llm_ros2 - Complete Dependencies Guide
 
 ## Overview
-This document provides a comprehensive list of all dependencies required to reproduce the omokai_ws robotics project. The project consists of four ROS 2 packages (LLM-based navigation and control system).
+This document provides a comprehensive list of all dependencies required to reproduce the llm_ros2 robotics project. The project consists of four ROS 2 packages (LLM-based navigation and control system).
 
 ## Installation Methods
 
@@ -157,7 +157,7 @@ After running the installation script:
 
 ```bash
 # Navigate to workspace
-cd /home/subham/omokai_ws
+cd /home/subham/llm_ros2
 
 # Source ROS 2
 source /opt/ros/humble/setup.bash
@@ -181,7 +181,7 @@ Ensure the following are set:
 source /opt/ros/humble/setup.bash
 
 # Workspace setup
-source ~/omokai_ws/install/setup.bash
+source ~/llm_ros2/install/setup.bash
 
 # Optional: Set ROS_DOMAIN_ID to avoid conflicts
 export ROS_DOMAIN_ID=42

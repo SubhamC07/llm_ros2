@@ -1,8 +1,8 @@
-# omokai_ws - Dependencies Configuration
+# llm_ros2 - Dependencies Configuration
 # YAML format for dependency management
 
 project:
-  name: omokai_ws
+  name: llm_ros2
   version: 0.0.1
   description: LLM-based autonomous robot navigation and control system
   ros_distro: humble

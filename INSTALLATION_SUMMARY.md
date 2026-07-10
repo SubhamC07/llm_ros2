@@ -1,6 +1,6 @@
-# omokai_ws Installation Files Summary
+# llm_ros2 Installation Files Summary
 
-This document summarizes all the dependency and installation files generated for the omokai_ws robotics project.
+This document summarizes all the dependency and installation files generated for the llm_ros2 robotics project.
 
 ## 📋 Generated Files
 
@@ -189,7 +189,7 @@ ros2 run llm_navigation nav2_goal
 
 ### 1. Build the Workspace
 ```bash
-cd /home/subham/omokai_ws
+cd /home/subham/llm_ros2
 colcon build
 ```
 
@@ -201,7 +201,7 @@ source install/setup.bash
 ### 3. Optional: Add to .bashrc
 ```bash
 echo "source /opt/ros/humble/setup.bash" >> ~/.bashrc
-echo "source /home/subham/omokai_ws/install/setup.bash" >> ~/.bashrc
+echo "source /home/subham/llm_ros2/install/setup.bash" >> ~/.bashrc
 source ~/.bashrc
 ```
 
@@ -292,5 +292,5 @@ ros2 run llm_navigation nav2_goal
 ---
 
 **Last Updated:** 2024
-**Project:** omokai_ws - LLM-based Autonomous Robot Navigation
+**Project:** llm_ros2 - LLM-based Autonomous Robot Navigation
 **ROS Distribution:** Humble

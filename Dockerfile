@@ -1,4 +1,4 @@
-# Dockerfile for omokai_ws
+# Dockerfile for llm_ros2
 # Complete reproducible environment for the LLM-based robot navigation system
 
 FROM ros:humble-ros-base-jammy
@@ -6,7 +6,7 @@ FROM ros:humble-ros-base-jammy
 # Set environment variables
 ENV DEBIAN_FRONTEND=noninteractive
 ENV ROS_DISTRO=humble
-ENV WORKSPACE=/home/omokai_ws
+ENV WORKSPACE=/home/llm_ros2
 
 # Install system dependencies
 RUN apt-get update && apt-get upgrade -y && apt-get install -y \

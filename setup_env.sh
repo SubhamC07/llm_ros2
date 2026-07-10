@@ -1,5 +1,5 @@
 #!/bin/bash
-# omokai_ws Environment Setup
+# llm_ros2 Environment Setup
 # Source this file to set up the environment for the workspace
 # Usage: source setup_env.sh
 
@@ -7,7 +7,7 @@
 SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 echo "=========================================="
-echo "Setting up omokai_ws environment"
+echo "Setting up llm_ros2 environment"
 echo "=========================================="
 
 # Check if ROS 2 is already sourced
@@ -37,7 +37,7 @@ echo "  ROS Install space: $AMENT_PREFIX_PATH"
 
 # Set workspace variables
 export WORKSPACE_ROOT="${SCRIPT_DIR}"
-export OMOKAI_WS="${WORKSPACE_ROOT}"
+export llm_ros2="${WORKSPACE_ROOT}"
 
 echo ""
 echo "Setting workspace paths..."
@@ -59,7 +59,7 @@ export ROS_PARAM_USE_SIM_TIME=${ROS_PARAM_USE_SIM_TIME:-false}
 echo ""
 echo "Environment variables set:"
 echo "  WORKSPACE_ROOT=${WORKSPACE_ROOT}"
-echo "  OMOKAI_WS=${OMOKAI_WS}"
+echo "  llm_ros2=${llm_ros2}"
 echo "  ROS_DISTRO=${ROS_DISTRO}"
 echo "  ROS_DOMAIN_ID=${ROS_DOMAIN_ID}"
 echo "  ROS_PARAM_USE_SIM_TIME=${ROS_PARAM_USE_SIM_TIME}"

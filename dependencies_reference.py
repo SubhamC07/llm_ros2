@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-omokai_ws - Quick Dependency Reference
+llm_ros2 - Quick Dependency Reference
 A quick lookup tool for all project dependencies
 """
 
@@ -148,7 +148,7 @@ def show_build_workflow():
    source setup_env.sh
 
 3. Build Workspace:
-   cd /home/subham/omokai_ws
+   cd /home/subham/llm_ros2
    colcon build
 
 4. Source Install:
@@ -182,7 +182,7 @@ ROS Distribution:    Humble
 def main():
     """Main menu"""
     print("\n" + "="*60)
-    print("  omokai_ws - Dependency Reference Tool")
+    print("  llm_ros2 - Dependency Reference Tool")
     print("="*60)
     print("""
 Options:

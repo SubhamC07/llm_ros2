@@ -1,11 +1,11 @@
 #!/bin/bash
-# Dependencies Installation Script for omokai_ws
+# Dependencies Installation Script for llm_ros2
 # This script installs all necessary dependencies to reproduce the project
 
 set -e
 
 echo "=========================================="
-echo "Installing omokai_ws Dependencies"
+echo "Installing llm_ros2 Dependencies"
 echo "=========================================="
 
 # Get the directory where this script is located

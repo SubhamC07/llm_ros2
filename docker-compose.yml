@@ -25,7 +25,7 @@ services:
     
     volumes:
       # Source code
-      - .:/home/omokai_ws:rw
+      - .:/home/llm_ros2:rw
       
       # ROS logs
       - ros_logs:/home/omokai/.ros/log

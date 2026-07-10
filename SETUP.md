@@ -1,6 +1,6 @@
-# omokai_ws - Installation & Setup Guide
+# llm_ros2 - Installation & Setup Guide
 
-A complete guide to reproducing the omokai_ws robotics project environment with all dependencies.
+A complete guide to reproducing the llm_ros2 robotics project environment with all dependencies.
 
 ## Quick Start
 
@@ -36,7 +36,7 @@ No system dependencies needed:
 docker build -t omokai:humble-latest .
 
 # Run development container
-docker run -it --rm -v $(pwd):/home/omokai_ws omokai:humble-latest bash
+docker run -it --rm -v $(pwd):/home/llm_ros2 omokai:humble-latest bash
 
 # Or with docker-compose
 docker-compose up -d
@@ -114,7 +114,7 @@ docker build -t omokai:humble .
 
 # Run container
 docker run -it --rm \
-  -v $(pwd):/home/omokai_ws \
+  -v $(pwd):/home/llm_ros2 \
   -e DISPLAY=$DISPLAY \
   -v /tmp/.X11-unix:/tmp/.X11-unix \
   omokai:humble bash
@@ -193,7 +193,7 @@ After successful installation:
 
 ```bash
 # Navigate to workspace
-cd /home/subham/omokai_ws
+cd /home/subham/llm_ros2
 
 # Source ROS 2 setup
 source /opt/ros/humble/setup.bash
@@ -238,7 +238,7 @@ Set these in your `.bashrc` or `.zshrc`:
 source /opt/ros/humble/setup.bash
 
 # Workspace setup
-source ~/omokai_ws/install/setup.bash
+source ~/llm_ros2/install/setup.bash
 
 # Optional ROS settings
 export ROS_DOMAIN_ID=42                    # Unique ID to avoid conflicts
@@ -319,7 +319,7 @@ sudo apt-get install python3-opencv
 
 ```bash
 # Clean build
-cd ~/omokai_ws
+cd ~/llm_ros2
 rm -rf build install log
 colcon build
 

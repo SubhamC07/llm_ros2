@@ -1,4 +1,4 @@
-# 🚀 Quick Start - omokai_ws Dependencies
+# 🚀 Quick Start - llm_ros2 Dependencies
 
 Welcome! This guide helps you quickly get the project running.
 
@@ -49,7 +49,7 @@ ros2 run llm_navigation nav2_goal
 
 ## 📖 Documentation Files
 
-Created in `/home/subham/omokai_ws/`:
+Created in `/home/subham/llm_ros2/`:
 
 | File | Purpose |
 |------|---------|
@@ -127,7 +127,7 @@ python3 -c "from ultralytics import YOLO; YOLO('yolov8n.pt')"
 ## 🗂️ Project Structure
 
 ```
-omokai_ws/
+llm_ros2/
 ├── src/
 │   ├── llm_description/     # Robot URDF/meshes
 │   ├── llm_prompt/          # LLM control system
@@ -157,7 +157,7 @@ python3 install_dependencies.py
 source setup_env.sh
 
 # 3. Navigate to workspace
-cd /home/subham/omokai_ws
+cd /home/subham/llm_ros2
 
 # 4. Build
 colcon build

@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Dependency Installation Script for omokai_ws
+Dependency Installation Script for llm_ros2
 This script handles all dependency installation in a cross-platform manner
 """
 
@@ -11,7 +11,7 @@ from pathlib import Path
 
 
 class DependencyInstaller:
-    """Installs all dependencies for the omokai_ws project"""
+    """Installs all dependencies for the llm_ros2 project"""
     
     def __init__(self):
         self.ros_distro = os.getenv('ROS_DISTRO', 'humble')
@@ -132,7 +132,7 @@ class DependencyInstaller:
     def install_all(self):
         """Install all dependencies"""
         print("\n" + "="*70)
-        print("omokai_ws Dependency Installation")
+        print("llm_ros2 Dependency Installation")
         print("="*70)
         print(f"ROS Distribution: {self.ros_distro}")
         print(f"Python Executable: {self.python_executable}")
@@ -164,7 +164,7 @@ class DependencyInstaller:
 def print_dependency_list():
     """Print a detailed dependency list"""
     print("\n" + "="*70)
-    print("Dependency Summary for omokai_ws")
+    print("Dependency Summary for llm_ros2")
     print("="*70)
     
     print("\n📦 System Dependencies:")
@@ -209,7 +209,7 @@ if __name__ == "__main__":
     import argparse
     
     parser = argparse.ArgumentParser(
-        description="Install dependencies for omokai_ws"
+        description="Install dependencies for llm_ros2"
     )
     parser.add_argument(
         "--list",
